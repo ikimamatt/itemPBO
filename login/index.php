@@ -24,6 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if ($stmt->rowCount() > 0) {
         echo"<script>alert('login berhasil');window.location='../html/';</script>";
         $_SESSION['login']= true;
+		$_SESSION['username'] = $_POST['username'];
     } else {
         echo"<script>alert('login gagal');window.location='';</script>";
     }
